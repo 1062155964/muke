@@ -1,0 +1,10 @@
+<page>
+    <view class='container'>
+        <image src='/images/avatar/1.png' class='userinfo'></image>
+        <text class='username'>Hello,TAI</text>
+        <!-- 点击实现onTap方法 -->
+        <view class='moto-container' bindtap="login">
+            <text class='moto'>登录</text>
+         </view> 
+     </view> 
+</page>

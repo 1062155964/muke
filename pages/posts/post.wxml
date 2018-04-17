@@ -1,0 +1,21 @@
+<import src="post-item/post-item-template.wxml"></import>
+<view>
+    <swiper indicator-dots="true" autoplay="true" interval="5000">
+        <swiper-item>
+            <image src="/images/wx.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/vr.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/iqiyi.png"></image>
+        </swiper-item>
+    </swiper>
+    <!-- wx-for动态创建html,item指对应数组地址,index指循环事件的索引 -->
+    <!-- 在当前页面调用js中的data,使用{{}} -->
+    <block wx:for="{{posts_key}}" wx:for-item="item" wx:for-index="idx">
+        <!-- template -->
+        <!-- data="..." ...代表对象展开,则data前无需再加对象. -->
+        <template is="postItem" data="{{...item}}"></template>
+    </block>
+</view>
